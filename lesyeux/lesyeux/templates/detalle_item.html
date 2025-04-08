@@ -1,0 +1,19 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}{{ item.titulo }} - LesYeux{% endblock %}
+
+{% block content %}
+    <h2>{{ item.titulo }}</h2>
+    <p><strong>Tipo:</strong> {{ item.tipo }}</p>
+    <p><strong>Descripción:</strong> {{ item.descripcion }}</p>
+    <p><strong>Fecha de lanzamiento:</strong> {{ item.fecha_lanzamiento }}</p>
+    <p><strong>Disponibilidad:</strong> {{ item.disponibilidad }}</p>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        <button type="submit" name="accion" value="comprar">Comprar</button>
+        <button type="submit" name="accion" value="alquilar">Alquilar</button>
+    </form>
+
+    <a href="{% url 'item_edit' item.id %}">Editar</a>
+{% endblock %}

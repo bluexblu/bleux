@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}LesYeux{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'index' %}">LesYeux</a></h1>
+        <p>Tu catálogo digital de cómics, películas y series</p>
+    </header>
+    <nav>
+        <a href="{% url 'index' %}">Inicio</a>
+        <a href="{% url 'item_create' %}">Agregar contenido</a>
+        <!-- Aquí podrías añadir login, lista de deseos, etc. -->
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 LesYeux. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
