@@ -1,4 +1,6 @@
-{% extends 'catalogo/base.html' %}
+{% extends 'base.html' %}
+
+{% load static %}
 
 {% block title %}{{ item.titulo }} - LesYeux{% endblock %}
 
@@ -15,5 +17,5 @@
         <button type="submit" name="accion" value="alquilar">Alquilar</button>
     </form>
 
-    <a href="{% url 'item_edit' item.id %}">Editar</a>
+    <a href="">Editar</a>
 {% endblock %}
