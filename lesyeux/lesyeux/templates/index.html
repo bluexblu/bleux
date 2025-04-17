@@ -1,23 +1,8 @@
 {% extends 'base.html' %}
 
-{% load static %}
-
 {% block title %}Inicio - LesYeux{% endblock %}
 
 {% block content %}
-    <h2>Explora el catálogo</h2>
-    <form method="get">
-        <input type="text" name="q" placeholder="Buscar cómic, película o serie...">
-        <button type="submit">Buscar</button>
-    </form>
-    <ul>
-        {% for item in items %}
-            <li>
-                <a href=>{{ item.titulo }}</a> - {{ item.tipo }}
-                <small>{{ item.fecha_lanzamiento }}</small>
-            </li>
-        {% empty %}
-            <li>No se encontraron resultados.</li>
-        {% endfor %}
-    </ul>
+    <h2>Inicio</h2>
+    <p>Welcome.</p>
 {% endblock %}

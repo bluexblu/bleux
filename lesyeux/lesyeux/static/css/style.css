@@ -1,23 +1,25 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #3498db); 
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
+    color: white;
 }
 
 p, a, li {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
 }
 
 header {
     background: linear-gradient(to right, #2c3e50, #3498db); 
     color: white;
-    padding: 60px 0; 
+    padding: 60px 20px; 
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 header h1 {
@@ -28,14 +30,14 @@ header h1 {
 
 header p {
     font-size: 1.2rem;
-    margin-top: 0;
+    margin-top: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 header a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    border: 2px solid #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -94,13 +96,28 @@ header a:hover {
 
 .search-form button {
     border-radius: 5px;
-    border: 1px solid #ddd;
-    background-color: #3498db;
-    color: white;
+    border: 1px solid #2980b9;
+    background-color: white;
+    color: 2980b9;
     padding: 10px 20px;
     cursor: pointer;
 }
 
 .search-form button:hover {
     background-color: #2980b9;
+}
+
+
+.btn-flat {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.btn-flat:hover {
+    color: #ffc107; /* amarillo al pasar el mouse */
+    text-decoration: none;
 }
