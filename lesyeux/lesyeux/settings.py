@@ -123,6 +123,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+   BASE_DIR / "lesyeux" /  "static",  # Ruta a la carpeta de la aplicación
+    BASE_DIR / "static",  # Ruta a la carpeta de archivos estáticos a nivel de proyecto
+]
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
