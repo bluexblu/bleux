@@ -108,7 +108,7 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 # Configuración de Django
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = os.getenv('DEBUG') == 'True'
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'v0-new-project-yu3uozid42r-2w25xgezo-bluexblus-projects.vercel.app','v0-new-project-yu3uozid42r.vercel.app']
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
