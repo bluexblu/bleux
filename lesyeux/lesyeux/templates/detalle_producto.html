@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ producto.titulo }} - LesYeux{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-0 rounded-4 p-4">
+                <div class="card-body">
+                    <!-- Título y descripción -->
+                    <h2 class="card-title text-center fw-bold mb-4">{{ producto.titulo }}</h2>
+                    <p class="text-center mb-4"><em>{{ producto.descripcion }}</em></p>
+
+                    <!-- Imagen del producto -->
+                    <div class="text-center mb-4">
+                        <img src="{{ producto.imagen.url }}" class="img-fluid rounded" alt="{{ producto.titulo }}" style="max-height: 400px;">
+                    </div>
+
+                    <!-- Detalles del producto -->
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><strong>Tipo:</strong> {{ producto.tipo }}</li>
+                        <li class="list-group-item"><strong>Precio de compra:</strong> S/ {{ producto.precio_compra }}</li>
+                        <li class="list-group-item"><strong>Precio de alquiler:</strong> S/ {{ producto.precio_alquiler }}</li>
+                        <li class="list-group-item"><strong>Stock disponible:</strong> {{ producto.stock }}</li>
+                        <li class="list-group-item"><strong>Fecha de publicación:</strong> {{ producto.fecha_publicacion|date:"d M, Y" }}</li>
+                    </ul>
+
+                    <!-- Formularios de acción -->
+                    <form method="post" class="d-flex flex-column gap-2">
+                        {% csrf_token %}
+                        <button type="submit" name="accion" value="comprar" class="btn btn-primary rounded-pill">Comprar</button>
+                        <button type="submit" name="accion" value="alquilar" class="btn btn-outline-secondary rounded-pill">Alquilar</button>
+                        <button type="submit" name="accion" value="deseo" class="btn btn-outline-dark rounded-pill">Añadir a lista de deseos</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

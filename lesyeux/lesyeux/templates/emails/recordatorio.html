@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Recordatorio de Vencimiento</title>
+</head>
+<body>
+    <h2>Recordatorio de Vencimiento</h2>
+    <p>Hola {{ usuario.email }},</p>
+    <p>Queremos recordarte que el siguiente producto está a punto de vencer:</p>
+    <ul>
+        <li><strong>Producto:</strong> {{ producto }}</li>
+        <li><strong>Días restantes:</strong> {{ dias }} días</li>
+    </ul>
+    <p>No olvides renovarlo o devolverlo a tiempo.</p>
+</body>
+</html>

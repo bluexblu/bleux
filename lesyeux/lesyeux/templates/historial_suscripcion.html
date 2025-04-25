@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Historial de Suscripciones{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="card shadow p-4 rounded-3">
+    <h3 class="text-center mb-4">Historial de Suscripciones</h3>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover table-striped align-middle text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Fecha</th>
+            <th>Plan</th>
+            <th>Método de pago</th>
+            <th>Monto</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>10/03/2025</td>
+            <td>Estándar</td>
+            <td>Visa</td>
+            <td>$10</td>
+            <td><span class="badge bg-success">Activo</span></td>
+          </tr>
+          <tr>
+            <td>10/02/2025</td>
+            <td>Básico</td>
+            <td>PayPal</td>
+            <td>$5</td>
+            <td><span class="badge bg-secondary">Vencido</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Carrito de compras{% endblock %}
+
+{% block content %}
+<h2>Tu Carrito</h2>
+
+{% if carrito_data %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in carrito_data  %}
+        <tr>
+            <td>{{ data.producto.titulo }}</td>
+            <td>{{ data.cantidad }}</td>
+            <td>${{ data.precio_unitario|floatformat:2 }}</td>
+            <td>${{ data.total|floatformat:2 }}</td>  <!-- Total por producto -->
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Total de la compra: ${{ total|floatformat:2 }}</h3>
+
+<form method="POST" action="{% url 'procesar_pago' %}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Pagar con PayPal</button>
+</form>
+
+<form method="post" action="{% url 'procesar_pedido' %}">
+    {% csrf_token %}
+    <button type="submit">Procesar Pedido</button>
+</form>
+
+{% else %}
+<p>No tienes productos en el carrito.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Deseos{% endblock %}
+
+{% block content %}
+<h2>Tu Lista de Deseos</h2>
+
+{% if lista_deseos_items %}
+<ul>
+    {% for item in lista_deseos_items %}
+    <li>{{ item.producto.titulo }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No tienes productos en tu lista de deseos.</p>
+{% endif %}
+{% endblock %}

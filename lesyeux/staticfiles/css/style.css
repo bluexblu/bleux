@@ -1,23 +1,26 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #3498db); 
+    color: #111111;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
+    color: white;
 }
 
 p, a, li {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
 }
 
 header {
     background: linear-gradient(to right, #2c3e50, #3498db); 
     color: white;
-    padding: 60px 0; 
+    padding: 60px 20px; 
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 header h1 {
@@ -28,14 +31,14 @@ header h1 {
 
 header p {
     font-size: 1.2rem;
-    margin-top: 0;
+    margin-top: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 header a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    border: 2px solid #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -56,10 +59,11 @@ header a:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+--Verificar
 .card-img-top {
-    height: 200px;
-    object-fit: cover;
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
 }
 
 .card-body {
@@ -94,13 +98,157 @@ header a:hover {
 
 .search-form button {
     border-radius: 5px;
-    border: 1px solid #ddd;
-    background-color: #3498db;
-    color: white;
+    border: 1px solid #2980b9;
+    background-color: white;
+    color: 2980b9;
     padding: 10px 20px;
     cursor: pointer;
 }
 
 .search-form button:hover {
     background-color: #2980b9;
+}
+
+
+.btn-flat {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.btn-flat:hover {
+    color: #ffc107; /* amarillo al pasar el mouse */
+    text-decoration: none;
+}
+
+.messages {
+    list-style: none;
+    padding: 10px;
+}
+
+.messages .error {
+    color: red;
+}
+
+.messages .success {
+    color: green;
+}
+
+.btn-recuperar {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-recuperar:hover {
+    background-color: #0056b3;
+}
+
+.btn-primary {
+    background-color: #232946;
+    border-color: #232946;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1e1e2f;
+  }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Contenedor de la imagen */
+.image-background-container {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 50vh; /* Ocupa la mitad del alto de la pantalla */
+    overflow: hidden; /* Evita que la imagen se desborde fuera del contenedor */
+    position: relative; /* Para asegurar que el contenido y la imagen se mantengan alineados */
+}
+
+/* Imagen que se ajusta al contenedor */
+.image-background {
+    position: absolute; /* La imagen está posicionada dentro del contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+    object-fit: cover; /* La imagen cubre completamente el área sin distorsionarse */
+    object-position: center; /* Asegura que la imagen se centre */
+}
+
+/* Contenido debajo de la imagen */
+.content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima de la imagen */
+    padding: 20px; /* Espaciado para el contenido */
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav.navbar {
+    background-color: #000 !important;
+    padding: 0.8rem 1.5rem;
+}
+
+.navbar-nav .nav-item a {
+    color: #fff !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-item a:hover {
+    color: #ccc !important;
+}
+
+.navbar-text {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+main.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.btn-outline-light {
+    border-radius: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/* Mostrar el dropdown al pasar el mouse */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* evita salto del dropdown */
+}
+
+/* Asegura que se muestre sobre otros elementos */
+.dropdown-menu {
+    position: absolute;
 }
