@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Registro - LesYeux{% endblock %}
+
+{% block content %}
+<div class="container mt-5" style="max-width: 400px;">
+  <div class="card shadow p-4 rounded-3">
+    <h3 class="text-center mb-4">Formulario de Registro</h3>
+    <form method="POST" action="{% url 'register_user' %}">
+      {% csrf_token %}
+
+      <div class="mb-3">
+        <label for="id_nombre" class="form-label">Nombre</label>
+        <input type="text" name="nombre" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="id_email" class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="id_password" class="form-label">Contraseña</label>
+        <input type="password" name="password" class="form-control" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+    </form>
+
+    <div class="mt-3 text-center">
+      <small>¿Olvidaste tu contraseña? <a href="{% url 'password_reset' %}" class="btn-recuperar">Recupérala aquí</a></small>
+    </div>
+  </div>
+</div>
+{% endblock %}

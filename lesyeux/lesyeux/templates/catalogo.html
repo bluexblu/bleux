@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Catálogo - LesYeux{% endblock %}
 
 {% block content %}
-<main class="container my-5">
-    <h2 class="mb-4 text-center">Explora el catálogo</h2>
+<main class="container py-5">
+    <h2 class="text-center fw-bold mb-4">Explora el Catálogo</h2>
 
     <!-- Formulario de búsqueda -->
     <div class="search-form mb-5 text-center">
-        <form method="get" class="d-flex justify-content-center">
-            <input type="text" name="q" class="form-control w-50 me-2" placeholder="Buscar cómic, película o serie...">
-            <button type="submit" class="btn btn-outline-primary">Buscar</button>
+        <form method="get" class="d-flex justify-content-center align-items-center gap-2">
+            <input type="text" name="q" class="form-control w-50 rounded-pill shadow-sm" placeholder="Buscar cómic, película o serie...">
+            <button type="submit" class="btn btn-outline-dark rounded-pill px-4">Buscar</button>
         </form>
     </div>
 
@@ -18,22 +20,23 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
         {% for item in items %}
         <div class="col">
-            <div class="card h-100">
-                {% if item.imagen_url %}
-                    <img src="" class="card-img-top" alt="{{ item.titulo }}">
+            <div class="card h-100 border-0 shadow rounded-4 overflow-hidden">
+                {% if item.imagen %}
+                <img src="{{ item.imagen.url }}" class="card-img-top object-fit-cover" alt="{{ item.titulo }}" style="height: 250px;">
                 {% else %}
-                    <img src="" class="card-img-top" alt="Imagen no disponible">
+                <img src="{% static 'images/default.jpg' %}" class="card-img-top object-fit-cover" alt="Imagen no disponible" style="height: 250px;">
                 {% endif %}
+
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">{{ item.titulo }}</h5>
-                    <p class="card-text">{{ item.descripcion|truncatewords:20 }}</p>
-                    <a href="{% url 'producto_detail' item.id %}" class="btn btn-primary mt-auto">Ver detalles</a>
+                    <h5 class="card-title fw-semibold">{{ item.titulo }}</h5>
+                    <p class="card-text text-muted small">{{ item.descripcion|truncatewords:20 }}</p>
+                    <a href="{% url 'producto_detail' item.id %}" class="btn btn-dark mt-auto rounded-pill">Ver detalles</a>
                 </div>
             </div>
         </div>
         {% empty %}
         <div class="col-12 text-center">
-            <p>No se encontraron resultados.</p>
+            <p class="text-muted">No se encontraron resultados.</p>
         </div>
         {% endfor %}
     </div>

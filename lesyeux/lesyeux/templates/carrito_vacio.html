@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Carrito vacío{% endblock %}
+
+{% block content %}
+<h2>Tu Carrito</h2>
+
+<p>No tienes productos en el carrito.</p>
+<p>Para ver tu carrito, por favor <a href="{% url 'login' %}">inicia sesión</a> o <a href="{% url 'registro' %}">regístrate</a>.</p>
+{% endblock %}

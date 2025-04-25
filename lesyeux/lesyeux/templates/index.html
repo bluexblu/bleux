@@ -1,8 +1,192 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Inicio - LesYeux{% endblock %}
 
 {% block content %}
-    <h2>Inicio</h2>
-    <p>Welcome.</p>
+<div class="image-background-container">
+    <img src="{% static 'images/the-last-of-us.jpg' %}" alt="Imagen de fondo" class="image-background">
+</div>
+
+<!-- Galería de fotos estáticas -->
+<div class="content">
+    <h4 class="mb-3">Galería</h4>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/one-piece.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/akira.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        
+            <div class="col-2 d-flex justify-content-end mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/berserk.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/attack-on-titan.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/blade-runner.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/death_note.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/inception.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/interstellar.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-end mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/mad-max.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/parasite.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/perfect-blue.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-end mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/sakamoto_days.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/sao.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/sprited-away.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-end mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/the-grand-budapest-hotel.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/the-matrix.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/tokyo-ghoul.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-end mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/vinland-saga.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/your-name.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/jujutsu-kaisen.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/re-zero.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        
+            <div class="col-2 d-flex justify-content-end mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/the-shawshank-redemption.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/neon-genesis-evangelion.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/old-boy.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        
+            <div class="col-2 d-flex justify-content-end mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/pans-labyrinth.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/pulp-fiction.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/hunter-hunter.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        
+            <div class="col-2 d-flex justify-content-end mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/cowboy-bebop.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-2 d-flex justify-content-start mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/ghost-in-the-shell.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm border-0" style="width: 100%; max-width: 222px; height: 350px; overflow: hidden;">
+                    <img src="{% static 'images/demon-slayer.jpg' %}" alt="Imagen de fondo" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

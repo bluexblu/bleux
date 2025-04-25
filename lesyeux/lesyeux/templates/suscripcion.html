@@ -3,6 +3,25 @@
 {% block title %}Suscripción - LesYeux{% endblock %}
 
 {% block content %}
-    <h2>Suscripción</h2>
-    <p>Elige un plan para acceder al contenido premium.</p>
+<div class="container py-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Suscripción</h2>
+        <p class="text-muted">Elige un plan para acceder al contenido premium.</p>
+    </div>
+
+    <div class="card mx-auto shadow-lg" style="max-width: 500px;">
+        <div class="card-body">
+            <h4 class="card-title text-center mb-4">Comprar Producto</h4>
+
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                <div class="mb-3">
+                    {{ form.as_p }}
+                </div>
+                <div class="d-grid">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Pagar con PayPal">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

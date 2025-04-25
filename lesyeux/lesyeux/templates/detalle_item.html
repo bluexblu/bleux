@@ -5,17 +5,29 @@
 {% block title %}{{ item.titulo }} - LesYeux{% endblock %}
 
 {% block content %}
-    <h2>{{ item.titulo }}</h2>
-    <p><strong>Tipo:</strong> {{ item.tipo }}</p>
-    <p><strong>Descripción:</strong> {{ item.descripcion }}</p>
-    <p><strong>Fecha de lanzamiento:</strong> {{ item.fecha_lanzamiento }}</p>
-    <p><strong>Disponibilidad:</strong> {{ item.disponibilidad }}</p>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-0 rounded-4 p-4">
+                <div class="card-body">
+                    <h2 class="card-title text-center fw-bold mb-4">{{ item.titulo }}</h2>
 
-    <form method="post" action="">
-        {% csrf_token %}
-        <button type="submit" name="accion" value="comprar">Comprar</button>
-        <button type="submit" name="accion" value="alquilar">Alquilar</button>
-    </form>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><strong>Tipo:</strong> {{ item.tipo }}</li>
+                        <li class="list-group-item"><strong>Descripción:</strong> {{ item.descripcion }}</li>
+                        <li class="list-group-item"><strong>Fecha de lanzamiento:</strong> {{ item.fecha_lanzamiento }}</li>
+                        <li class="list-group-item"><strong>Disponibilidad:</strong> {{ item.disponibilidad }}</li>
+                    </ul>
 
-    <a href="">Editar</a>
+                    <form method="post" class="d-flex flex-column gap-2">
+                        {% csrf_token %}
+                        <button type="submit" name="accion" value="comprar" class="btn btn-primary rounded-pill">Comprar</button>
+                        <button type="submit" name="accion" value="alquilar" class="btn btn-outline-secondary rounded-pill">Alquilar</button>
+                        <button type="submit" name="accion" value="deseo" class="btn btn-outline-dark rounded-pill">Añadir a lista de deseos</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

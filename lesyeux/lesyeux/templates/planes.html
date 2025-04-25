@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Planes de Suscripción{% endblock %}
+
+{% block content %}
+<div class="container mt-5" style="max-width: 600px;">
+  <div class="card shadow p-4 rounded-3">
+    <h3 class="text-center mb-4">Elige tu plan</h3>
+    <div class="row">
+      <!-- Plan Básico -->
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-header">Básico</div>
+          <div class="card-body">
+            <h5 class="card-title">$5 / mes</h5>
+            <p class="card-text">Acceso limitado al contenido.</p>
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_xclick">
+              <input type="hidden" name="business" value="sb-xyemu38604524@business.example.com">
+              <input type="hidden" name="item_name" value="Suscripción Básico">
+              <input type="hidden" name="amount" value="5.00">
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="hidden" name="return" value="{% url 'confirmacion_pago' %}">
+              <input type="hidden" name="cancel_return" value="{% url 'cancelar_pago' %}">
+              <button type="submit" class="btn btn-outline-primary w-100">Seleccionar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan Estándar -->
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-header">Estándar</div>
+          <div class="card-body">
+            <h5 class="card-title">$10 / mes</h5>
+            <p class="card-text">Acceso completo y sin anuncios.</p>
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_xclick">
+              <input type="hidden" name="business" value="sb-xyemu38604524@business.example.com">
+              <input type="hidden" name="item_name" value="Suscripción Estándar">
+              <input type="hidden" name="amount" value="10.00">
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="hidden" name="return" value="{% url 'confirmacion_pago' %}">
+              <input type="hidden" name="cancel_return" value="{% url 'cancelar_pago' %}">
+              <button type="submit" class="btn btn-outline-success w-100">Seleccionar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan Premium -->
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-header">Premium</div>
+          <div class="card-body">
+            <h5 class="card-title">$15 / mes</h5>
+            <p class="card-text">Todo incluido + contenido exclusivo.</p>
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_xclick">
+              <input type="hidden" name="business" value="sb-xyemu38604524@business.example.com">
+              <input type="hidden" name="item_name" value="Suscripción Premium">
+              <input type="hidden" name="amount" value="15.00">
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="hidden" name="return" value="{% url 'confirmacion_pago' %}">
+              <input type="hidden" name="cancel_return" value="{% url 'cancelar_pago' %}">
+              <button type="submit" class="btn btn-outline-warning w-100">Seleccionar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

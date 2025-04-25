@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Series - LesYeux{% endblock %}
+
+{% block content %}
+<div class="my-5">
+    <h1 class="mb-4">Series</h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for series in series %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="" class="card-img-top" alt="{{ series.titulo }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ series.titulo }}</h5>
+                    <p class="card-text">{{ series.descripcion|truncatewords:20 }}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                    <span class="text-muted">S/{{ series.precio }}</span>
+                    <a href="{% url 'producto_detail' series.id %}" class="btn btn-sm btn-outline-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col">
+            <p class="text-muted">No hay series disponibles por ahora.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
