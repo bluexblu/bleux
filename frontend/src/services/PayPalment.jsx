@@ -1,0 +1,40 @@
+import React from 'react';
+import baselayout from './baselayout';
+
+const PayPalPayment = ({ total }) => {
+  return (
+    <div className="container">
+      <h2>Total a pagar: ${total}</h2>
+
+      <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+        {/* Identificador de PayPal */}
+        <input type="hidden" name="cmd" value="_xclick" />
+
+        {/* Dirección de correo asociada a la cuenta de PayPal */}
+        <input type="hidden" name="business" value="sb-xyemu38604524@business.example.com" />
+
+        {/* Total de la transacción */}
+        <input type="hidden" name="amount" value={total} />
+
+        {/* Moneda en la que se realizará el pago */}
+        <input type="hidden" name="currency_code" value="USD" />
+
+        {/* Nombre del producto o descripción de la transacción */}
+        <input type="hidden" name="item_name" value="Compra en LesYeux" />
+
+        {/* URL para redirigir después de una compra exitosa */}
+        <input type="hidden" name="return" value="http://127.0.0.1:8000/confirmacion_pago/" />
+
+        {/* URL para redirigir si el usuario cancela el pago */}
+        <input type="hidden" name="cancel_return" value="http://127.0.0.1:8000/cancelar_pago/" />
+
+        {/* URL para recibir notificaciones (opcional, solo si quieres configurar IPN) */}
+        {/* <input type="hidden" name="notify_url" value="URL_DE_NOTIFICACION_IPN" /> */}
+
+        <button type="submit" className="btn btn-primary">Pagar con PayPal</button>
+      </form>
+    </div>
+  );
+};
+
+export default PayPalPayment;
